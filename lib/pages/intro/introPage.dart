@@ -46,7 +46,7 @@ class IntroPage extends StatelessWidget {
                 decoration:
                 BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/orangelogo.png",),
+                        image: AssetImage("assets/orangelogo.png"),
                         fit: BoxFit.fitHeight
                     )
                 ),
