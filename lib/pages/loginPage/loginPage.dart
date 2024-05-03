@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
-                Text("Login",
+                Text("Connectez-vous",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold ),),
                 SizedBox(height: 30,),
                 Text("Login to your account",
@@ -50,12 +50,6 @@ class LoginPage extends StatelessWidget {
               decoration:
                 BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  /*border: Border(
-                    bottom: BorderSide(color: Colors.black),
-                    top: BorderSide(color: Colors.black),
-                    left: BorderSide(color: Colors.black),
-                    right: BorderSide(color: Colors.black),
-                  ),*/
 
                 ),
 
@@ -69,7 +63,7 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 child: Text(
-                  "Login", style: TextStyle(
+                  "Connexion", style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 18,
                   color:Colors.white
@@ -80,8 +74,8 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("Don't have an account?"),
-                Text(" Sign Up", style: TextStyle(
+                Text("vous avez pas un compte?"),
+                Text(" Créer ", style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 18
 
@@ -89,14 +83,14 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             Container(
-              padding: EdgeInsets.only(top:100),
-              height: 200,
-              decoration:
-              BoxDecoration(
+              padding: EdgeInsets.only(top: 100),
+              height: 120,
+              width: 120,
+              decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/orangelogo.png"),
-                  fit: BoxFit.fitHeight
-                )
+                  fit: BoxFit.contain,
+                ),
               ),
             )
           ],

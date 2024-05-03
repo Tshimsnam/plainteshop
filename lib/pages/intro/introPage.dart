@@ -42,7 +42,8 @@ class IntroPage extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.only(top:100),
-                height: 200,
+                height: 130,
+                width: 130,
                 decoration:
                 BoxDecoration(
                     image: DecorationImage(
@@ -51,6 +52,7 @@ class IntroPage extends StatelessWidget {
                     )
                 ),
               ),
+              SizedBox(height: 10,),
 
               Column(
                 children: <Widget>[
@@ -68,15 +70,14 @@ class IntroPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50)
                     ),
                     child: Text(
-                      "Login",
+                      "Connexion",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18
                       ),
                     ),
-
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 40,),
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
@@ -88,14 +89,16 @@ class IntroPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50)
                     ),
                     child: Text(
-                      "Sign Up",
+                      "Créer un compte",
                       style: TextStyle(
                         color:Colors.white,
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
                       ),
                     ),
-                  )
+                  ),
+
+                  SizedBox(height: 80,)
                 ],
               )
 

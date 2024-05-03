@@ -1,5 +1,8 @@
+import 'dart:js';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:plainteshop/pages/loginPage/loginPage.dart';
 
 class SignupPage extends StatelessWidget{
@@ -7,6 +10,47 @@ class SignupPage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+            onPressed:(){
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios,
+              size: 20,
+              color: Colors.black,)
+        ),
+      ),
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 30),
+        child: Column(
+          children: [
+
+            SizedBox(height: 60,),
+            _titreText(),
+            SizedBox(height: 30,),
+            _usernameField(),
+            SizedBox(height: 30,),
+            _posteField(),
+            SizedBox(height: 30,),
+            _adressMailField(),
+            SizedBox(height: 30,),
+            _passWordField(),
+            SizedBox(height: 30),
+            _confirmPassWordField(),
+            SizedBox(height: 30,),
+            SizedBox(height: 40,),
+            _validationBtn()
+
+          ],
+        ),
+      ),
+    );
+
+
+      /*resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
@@ -36,19 +80,22 @@ class SignupPage extends StatelessWidget{
                     SizedBox(height: 30,),
                     Text("Sign up your account",
                       style: TextStyle(fontSize: 15,
-                        color: Colors.grey[700],),)
+                        color: Colors.grey[700],),),
+
+                    _usernameFiled(),
                   ],
                 ),
-                Padding(padding: EdgeInsets.symmetric(horizontal: 40),
+
+               / Padding(padding: EdgeInsets.symmetric(horizontal: 40),
                   child: Column(
                     children: <Widget> [
                       inputFile(label: "Name"),
-                      inputFile(label: "FirstName"),
+                      inputFile(label: "Poste"),
                       inputFile(label: "E-mail"),
                       inputFile(label: "Password", obscureText: true),
                       inputFile(label: "Confirm Password"),
                     ],),
-                ),
+                ),/
                 Container(
                   padding: EdgeInsets.only(top: 20, left: 40, right: 40),
                   decoration:
@@ -59,10 +106,10 @@ class SignupPage extends StatelessWidget{
 
                   child: MaterialButton(
                     minWidth: double.infinity,
-                    height: 60,
+                    height: 50,
                     onPressed: (){},
                     color:Colors.deepOrange,
-                    elevation: 0,
+                    elevation: 1,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
                     ),
@@ -94,7 +141,82 @@ class SignupPage extends StatelessWidget{
       ),
 
 
+    );*/
+  }
+
+  Widget _titreText(){
+    return Text("Créer un compte", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25));
+  }
+
+  Widget _usernameField() {
+    return TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: "Name",
+        prefixIcon: Icon(Icons.verified_user)
+      ),
     );
   }
+
+  Widget _posteField(){
+    return TextField(
+      decoration: InputDecoration(
+        border : OutlineInputBorder(),
+        labelText: "Poste",
+        prefixIcon: Icon(Icons.accessibility)
+      ),
+    );
+  }
+
+  Widget _adressMailField(){
+    return TextField(
+      decoration: InputDecoration(
+        border : OutlineInputBorder(),
+        labelText: "E-mail",
+        prefixIcon: Icon(Icons.mail)
+
+      )
+    );
+  }
+Widget _passWordField(){
+    return TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: "Password",
+        prefixIcon: Icon(Icons.password)
+      )
+    );
+}
+
+Widget _confirmPassWordField(){
+    return TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: "Confirm Password",
+          prefixIcon: Icon(Icons.password)
+      ),
+    );
+}
+
+Widget _validationBtn(){
+    return Container(
+      width: double.infinity,
+      height: 50,
+      margin: EdgeInsets.symmetric(horizontal: 30),
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.deepOrange,
+          foregroundColor: Colors.white,
+          padding: EdgeInsets.symmetric(horizontal: 20)
+        ),
+        onPressed: (){
+          //Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+        },
+        icon: Icon(Icons.check_box),
+        label: const Text("Creer", style: TextStyle(fontSize: 20, color: Colors.white)),
+      ),
+
+    );
+}
 
 }
