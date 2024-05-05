@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:plainteshop/pages/loginPage/signUpPage.dart';
+import 'package:plainteshop/pages/login/signUpPage.dart';
 
-import '../loginPage/loginPage.dart';
+import '../login/loginPage.dart';
 
 class IntroPage extends StatelessWidget {
   @override

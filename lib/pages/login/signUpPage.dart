@@ -3,7 +3,7 @@ import 'dart:js';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:plainteshop/pages/loginPage/loginPage.dart';
+import 'package:plainteshop/pages/login/loginPage.dart';
 
 class SignupPage extends StatelessWidget{
   @override
